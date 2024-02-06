@@ -10,7 +10,7 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 //let sumEl = document.getElementById("sum-el")
 let sumEl = document.querySelector("#sum-el")
-
+let cardEl = document.getElementById("card-el")
 
 function startGame(){
     if (sum < 21){
@@ -26,5 +26,6 @@ function startGame(){
         isAlive = false
     }
     messageEl.textContent = message
+    cardEl.textContent = "Card: "+ firstCard + " " + secondCard
     sumEl.textContent = "Sum: " + sum
 }

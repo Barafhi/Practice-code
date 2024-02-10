@@ -6,7 +6,7 @@ const inputEl = document.getElementById("input-el")
 
 inputBtn.addEventListener("click", function(){
    // console.log("button clicked from addEventlistener")
-   const input = inputEl
-   myLeads.push(input)
+   // const input = inputEl
+   myLeads.push(inputEl.value)
 
 })

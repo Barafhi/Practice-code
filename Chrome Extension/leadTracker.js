@@ -1,7 +1,7 @@
 
-let inputBtn = document.getElementById("input-btn")
+const inputBtn = document.getElementById("input-btn")
 let myLeads = []
-let inputEl = document.getElementById("input-el")
+const inputEl = document.getElementById("input-el")
 
 inputBtn.addEventListener("click", function(){
    // console.log("button clicked from addEventlistener")

@@ -1,8 +1,8 @@
 
 const inputBtn = document.getElementById("input-btn")
-let myLeads = `[]`
+let myLeads = []
 
-myJSON.parse(myLeads)
+//myJSON.parse(myLeads)
 // const make sure that the developer can know which variable can be reassigned
 const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
@@ -16,6 +16,8 @@ inputBtn.addEventListener("click", function(){
    // const input = inputEl
    myLeads.push(inputEl.value)
    inputEl.value = ""
+
+   localStorage.setItem("myLeads", JSON.stringify(myLeads))
    renderLeads()
 
 })

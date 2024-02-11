@@ -1,9 +1,15 @@
 
 const inputBtn = document.getElementById("input-btn")
-let myLeads = []
+let myLeads = `[]`
+
+myJSON.parse(myLeads)
 // const make sure that the developer can know which variable can be reassigned
 const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
+
+// localStorage.setItem("myLeads", "www.theexample.com")
+// console(localStorage.getItem("myLeads"))
+// localStorage.clear()
 
 inputBtn.addEventListener("click", function(){
    // console.log("button clicked from addEventlistener")
@@ -18,7 +24,14 @@ function renderLeads(){
     let listItems = ""
 
     for(let i = 0; i < myLeads.length; i++){
-        listItems += "<li><a target='_blank' href ='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
+        // listItems += "<li><a target='_blank' href ='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
+        listItems += `
+            <li>
+                <a target="_blank" href ="${myLeads[i]}">
+                    ${myLeads[i]}
+                </a>
+            </li>
+            `
     // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
         // const li = document.createElement("li")
         // li.textContent = myLeads[i]

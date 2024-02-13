@@ -11,6 +11,13 @@ const ulEl = document.getElementById("ul-el")
 // console(localStorage.getItem("myLeads"))
 // localStorage.clear()
 
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+
+if(leadsFromLocalStorage){
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
+
 inputBtn.addEventListener("click", function(){
    // console.log("button clicked from addEventlistener")
    // const input = inputEl
